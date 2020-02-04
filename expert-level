@@ -1,0 +1,45 @@
+from numpy.random import randint
+
+values = randint(1, 10)
+
+point = 0
+res = 0
+life = 5
+
+print("\nYour going to get point as many as you can!\n")
+print("While your point higher, the number is wider!\n")
+
+while True:
+    print("================================")
+    print("Number: 1 to", 10 + point)
+    print("Your life remaining: ", life)
+    print("Your point: " , point)
+    res = input("Number: ")
+
+    if res == "exit":
+        break
+
+    intres = int(res)
+
+    
+    if values == intres:
+        print("\nYou got it!\n")
+        point += 1
+        life += 4
+        values = randint(1, 10 + point)
+    elif intres > values:
+        print("Wrong number! Your number is greater")
+        life -= 1
+        if life == 0:
+            print("\nYou lose!")
+            break
+    elif intres < values:
+        print("Wrong number! Your number is lesser")
+        life -= 1
+        if life == 0:
+            print("\nYou lose!")
+            break
+    
+    
+    
+
