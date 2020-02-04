@@ -1,10 +1,13 @@
 from numpy.random import randint
 
+# values contains a random number 1 to 10
 values = randint(1, 10)
 
+# initial parameter
 res = 0
 life = 5
 
+# main program
 while True:
     print("================================")
     print("Your life remaining: ", life)
