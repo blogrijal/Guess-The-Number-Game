@@ -1,0 +1,25 @@
+from numpy.random import randint
+
+values = randint(1, 10)
+
+res = 0
+life = 5
+
+while True:
+    print("================================")
+    print("Your life remaining: ", life)
+    res = int(input("Number: "))
+
+    if values == res:
+        print("\nYou got it!")
+        break
+    elif life == 0:
+        print("\nYou lose!")
+        break
+    elif res > values:
+        print("Wrong number! Your number is greater")
+    elif res < values:
+        print("Wrong number! Your number is lesser")
+    
+    life -= 1
+    
